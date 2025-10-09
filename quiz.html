@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Қола дәуірі Тесті - Қазақстан тарихы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <header>
+            <div class="container">
+                <h1>Қола дәуірі Тесті</h1>
+                <p>Қазақстан тарихынан 20 сұрақ</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="quiz-intro" id="quizIntro">
+                <h2>Тест туралы ақпарат</h2>
+                <div class="info-card">
+                    <h3>Нұсқаулық</h3>
+                    <ul>
+                        <li>Тест 20 сұрақтан тұрады</li>
+                        <li>Әр сұраққа тек бір дұрыс жауап</li>
+                        <li>Тест барысында басқа бетке өте алмайсыз</li>
+                        <li>Нәтиже мұғалімге жіберіледі</li>
+                        <li>Тестті қайта бастау мүмкін емес</li>
+                    </ul>
+                </div>
+                
+                <div class="student-info">
+                    <h3>Оқушы ақпараты</h3>
+                    <form id="studentForm">
+                        <label for="studentName">Аты-жөніңіз:</label>
+                        <input type="text" id="studentName" required>
+                        
+                        <label for="studentClass">Сыныбыңыз:</label>
+                        <input type="text" id="studentClass" required>
+                        
+                        <label for="studentId">Оқушы ID (мектептегі):</label>
+                        <input type="text" id="studentId" required>
+                    </form>
+                </div>
+                
+                <button id="startQuiz" class="start-button">Тестті бастау</button>
+            </div>
+
+            <div class="quiz-container" id="quizContainer" style="display: none;">
+                <div class="quiz-header">
+                    <div class="timer">Уақыт: <span id="timeRemaining">30:00</span></div>
+                    <div class="progress">Прогресс: <span id="progressText">1/20</span></div>
+                </div>
+                
+                <form id="fullQuiz">
+                    <!-- Question 1 -->
+                    <div class="quiz-question active" id="question1">
+                        <h3>1. Қола дәуірі қай мыңжылдықта басталды?</h3>
+                        <label>
+                            <input type="radio" name="q1" value="a" required>
+                            б.з.б. IV мыңжылдық
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b">
+                            б.з.б. III мыңжылдық
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c">
+                            б.з.б. II мыңжылдық
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="d">
+                            б.з.б. I мыңжылдық
+                        </label>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="quiz-question" id="question2">
+                        <h3>2. Қола қандай металдардың қоспасынан жасалады?</h3>
+                        <label>
+                            <input type="radio" name="q2" value="a" required>
+                            Темір мен мыс
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b">
+                            Мыс пен қалайы
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c">
+                            Алтын мен күміс
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="d">
+                            Мырыш пен қалайы
+                        </label>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="quiz-question" id="question3">
+                        <h3>3. Қазақстандағы қола дәуірінің негізгі кезеңдері қанша?</h3>
+                        <label>
+                            <input type="radio" name="q3" value="a" required>
+                            2
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="b">
+                            3
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="c">
+                            4
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="d">
+                            5
+                        </label>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="quiz-question" id="question4">
+                        <h3>4. Ботай мәдениеті қай аймақта орналасқан?</h3>
+                        <label>
+                            <input type="radio" name="q4" value="a" required>
+                            Оңтүстік Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="b">
+                            Батыс Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="c">
+                            Солтүстік Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="d">
+                            Шығыс Қазақстан
+                        </label>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="quiz-question" id="question5">
+                        <h3>5. Қола дәуірінде негізгі экономикалық қызмет не болды?</h3>
+                        <label>
+                            <input type="radio" name="q5" value="a" required>
+                            Егіншілік
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="b">
+                            Мал шаруашылығы
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="c">
+                            Сауда
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="d">
+                            Қолөнер
+                        </label>
+                    </div>
+                    
+                    <!-- Question 6 -->
+                    <div class="quiz-question" id="question6">
+                        <h3>6. Андронов мәдениеті қай мыңжылдықта пайда болды?</h3>
+                        <label>
+                            <input type="radio" name="q6" value="a" required>
+                            б.з.б. III мыңжылдық
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="b">
+                            б.з.б. II мыңжылдықтың басы
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="c">
+                            б.з.б. II мыңжылдықтың ортасы
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="d">
+                            б.з.б. I мыңжылдық
+                        </label>
+                    </div>
+                    
+                    <!-- Question 7 -->
+                    <div class="quiz-question" id="question7">
+                        <h3>7. Қола дәуірінің орта кезеңі қай уақытқа жатады?</h3>
+                        <label>
+                            <input type="radio" name="q7" value="a" required>
+                            б.з.б. 3000-2200 жж.
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="b">
+                            б.з.б. 2200-1700 жж.
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="c">
+                            б.з.б. 1700-1200 жж.
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="d">
+                            б.з.б. 1200-800 жж.
+                        </label>
+                    </div>
+                    
+                    <!-- Question 8 -->
+                    <div class="quiz-question" id="question8">
+                        <h3>8. Афанасьев мәдениеті қай аймақта таралған?</h3>
+                        <label>
+                            <input type="radio" name="q8" value="a" required>
+                            Орталық Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="b">
+                            Солтүстік Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="c">
+                            Батыс Сібір мен Солтүстік Қазақстан
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="d">
+                            Шығыс Қазақстан
+                        </label>
+                    </div>
+                    
+                    <!-- Question 9 -->
+                    <div class="quiz-question" id="question9">
+                        <h3>9. Қола дәуірінде қандай құрал-саймандар пайда болды?</h3>
+                        <label>
+                            <input type="radio" name="q9" value="a" required>
+                            Темір құралдар
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="b">
+                            Ағаш құралдар
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="c">
+                            Қола құралдар
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="d">
+                            Күйіртілген тас құралдар
+                        </label>
+                    </div>
+                    
+                    <!-- Question 10 -->
+                    <div class="quiz-question" id="question10">
+                        <h3>10. Қола дәуірінде адамдар нені үйренді?</h3>
+                        <label>
+                            <input type="radio" name="q10" value="a" required>
+                            Темір өндірісін
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="b">
+                            Қола өндірісін
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="c">
+                            Алтын өндірісін
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="d">
+                            Күміс өндірісін
+                        </label>
+                    </div>
+                    
+                    <!-- Question 11 -->
+                    <div class="quiz-question" id="question11">
+                        <h3>11. Қола дәуірінде қандай діни рәсімдер болды?</h3>
+                        <label>
+                            <input type="radio" name="q11" value="a" required>
+                            Жерлендіру рәсімдері
+                        </label>
+                        <label>
+                            <input type="radio" name="q11" value="b">
+                            Тағын тойлау
+                        </label>
+                        <label>
+                            <input type="radio" name="q11" value="c">
+                            Жыл сайынғы мерекелер
+                        </label>
+                        <label>
+                            <input type="radio" name="q11" value="d">
+                            Ұйқы тойлау
+                        </label>
+                    </div>
+                    
+                    <!-- Question 12 -->
+                    <div class="quiz-question" id="question12">
+                        <h3>12. Қола дәуірінде қандай үйлерде тұрған?</h3>
+                        <label>
+                            <input type="radio" name="q12" value="a" required>
+                            Жер үйлер мен жартас үңгірлерде
+                        </label>
+                        <label>
+                            <input type="radio" name="q12" value="b">
+                            Шатырлы үйлерде
+                        </label>
+                        <label>
+                            <input type="radio" name="q12" value="c">
+                            Көшетін үйлерде
+                        </label>
+                        <label>
+                            <input type="radio" name="q12" value="d">
+                            Бетон үйлерде
+                        </label>
+                    </div>
+                    
+                    <!-- Question 13 -->
+                    <div class="quiz-question" id="question13">
+                        <h3>13. Қола дәуірінде қандай киімдер киіген?</h3>
+                        <label>
+                            <input type="radio" name="q13" value="a" required>
+                            Теріден тігілген киімдер
+                        </label>
+                        <label>
+                            <input type="radio" name="q13" value="b">
+                            Мата киімдер
+                        </label>
+                        <label>
+                            <input type="radio" name="q13" value="c">
+                            Жүнді киімдер
+                        </label>
+                        <label>
+                            <input type="radio" name="q13" value="d">
+                            Синтетикалық киімдер
+                        </label>
+                    </div>
+                    
+                    <!-- Question 14 -->
+                    <div class="quiz-question" id="question14">
+                        <h3>14. Қола дәуірінде қандай өнер дамыды?</h3>
+                        <label>
+                            <input type="radio" name="q14" value="a" required>
+                            Зергерлік өнер
+                        </label>
+                        <label>
+                            <input type="radio" name="q14" value="b">
+                            Саз бейімдеу өнері
+                        </label>
+                        <label>
+                            <input type="radio" name="q14" value="c">
+                            Ағаш өнері
+                        </label>
+                        <label>
+                            <input type="radio" name="q14" value="d">
+                            Темір өнері
+                        </label>
+                    </div>
+                    
+                    <!-- Question 15 -->
+                    <div class="quiz-question" id="question15">
+                        <h3>15. Қола дәуірінде қандай сауда байланыстар болды?</h3>
+                        <label>
+                            <input type="radio" name="q15" value="a" required>
+                            Жергілікті сауда
+                        </label>
+                        <label>
+                            <input type="radio" name="q15" value="b">
+                            Аймақтық сауда
+                        </label>
+                        <label>
+                            <input type="radio" name="q15" value="c">
+                            Ұзақ қашықтықтағы сауда
+                        </label>
+                        <label>
+                            <input type="radio" name="q15" value="d">
+                            Халықаралық сауда
+                        </label>
+                    </div>
+                    
+                    <!-- Question 16 -->
+                    <div class="quiz-question" id="question16">
+                        <h3>16. Қола дәуірінде қандай қоғамдық құрылым пайда болды?</h3>
+                        <label>
+                            <input type="radio" name="q16" value="a" required>
+                            Теократия
+                        </label>
+                        <label>
+                            <input type="radio" name="q16" value="b">
+                            Демократия
+                        </label>
+                        <label>
+                            <input type="radio" name="q16" value="c">
+                            Қауымдастықтар
+                        </label>
+                        <label>
+                            <input type="radio" name="q16" value="d">
+                            Монархия
+                        </label>
+                    </div>
+                    
+                    <!-- Question 17 -->
+                    <div class="quiz-question" id="question17">
+                        <h3>17. Қола дәуірінде қандай аңдарға құрмет көрсеткен?</h3>
+                        <label>
+                            <input type="radio" name="q17" value="a" required>
+                            Қоян мен құс
+                        </label>
+                        <label>
+                            <input type="radio" name="q17" value="b">
+                            Түлкі мен қасқыр
+                        </label>
+                        <label>
+                            <input type="radio" name="q17" value="c">
+                            Бұғы мен аю
+                        </label>
+                        <label>
+                            <input type="radio" name="q17" value="d">
+                            Барыс пен түйе
+                        </label>
+                    </div>
+                    
+                    <!-- Question 18 -->
+                    <div class="quiz-question" id="question18">
+                        <h3>18. Қола дәуірінде қандай технологиялар дамыды?</h3>
+                        <label>
+                            <input type="radio" name="q18" value="a" required>
+                            Қайта қалыптандыру технологиясы
+                        </label>
+                        <label>
+                            <input type="radio" name="q18" value="b">
+                            Темір өндірісі
+                        </label>
+                        <label>
+                            <input type="radio" name="q18" value="c">
+                            Ағаш өңдеу
+                        </label>
+                        <label>
+                            <input type="radio" name="q18" value="d">
+                            Тас өңдеу
+                        </label>
+                    </div>
+                    
+                    <!-- Question 19 -->
+                    <div class="quiz-question" id="question19">
+                        <h3>19. Қола дәуірінде қандай ыдыстар қолданылды?</h3>
+                        <label>
+                            <input type="radio" name="q19" value="a" required>
+                            Қола ыдыстар
+                        </label>
+                        <label>
+                            <input type="radio" name="q19" value="b">
+                            Күйіртілген тас ыдыстар
+                        </label>
+                        <label>
+                            <input type="radio" name="q19" value="c">
+                            Ағаш ыдыстар
+                        </label>
+                        <label>
+                            <input type="radio" name="q19" value="d">
+                            Көгілдір ыдыстар
+                        </label>
+                    </div>
+                    
+                    <!-- Question 20 -->
+                    <div class="quiz-question" id="question20">
+                        <h3>20. Қола дәуірі Қазақстан тарихында қандай маңызға ие?</h3>
+                        <label>
+                            <input type="radio" name="q20" value="a" required>
+                            Қарапайым кезең
+                        </label>
+                        <label>
+                            <input type="radio" name="q20" value="b">
+                            Маңызды кезең
+                        </label>
+                        <label>
+                            <input type="radio" name="q20" value="c">
+                            Еш маңызы жоқ
+                        </label>
+                        <label>
+                            <input type="radio" name="q20" value="d">
+                            Кейінірек ұмытылған
+                        </label>
+                    </div>
+                    
+                    <button type="button" id="submitFullQuiz" class="submit-button">Тестті аяқтау</button>
+                </form>
+                
+                <div class="quiz-navigation">
+                    <button id="prevQuestion" class="nav-button" disabled>Артқа</button>
+                    <button id="nextQuestion" class="nav-button">Алға</button>
+                </div>
+            </div>
+
+            <div class="quiz-result" id="quizResult" style="display: none;">
+                <h2>Тест нәтижесі</h2>
+                <div class="result-content">
+                    <p id="resultMessage"></p>
+                    <div id="resultDetails"></div>
+                    <button id="finishQuiz" class="finish-button">Тестті аяқтау</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
